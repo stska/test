@@ -131,11 +131,20 @@ $('.carts').droppable({
         })
        // ui.draggable.draggable('disable').appendTo(this);
         ui.draggable.appendTo(this);
-       // sss(this);
+        sss(this);
     }
+
 })
-/*function sss(costF) {
-   var a=$('.carts .good').length;
+var summ=0;
+function sss() {
+    var collect=$('.carts > div');
+    for(var i=0;i<collect.length;i++){
+        var dat=collect[i].attributes[1].nodeValue;
+        summ=summ+(+dat);
+        console.log(dat);
+    }
+    $('.money').text(summ);
+  /* var a=$('.carts .good').length;
    var b=$('.carts .good').attributes.nodeValue;
    console.log(b);
     var fin =$('.carts > .good').data();
@@ -145,9 +154,9 @@ $('.carts').droppable({
     names=sum.data()
     console.log(names.cost);
     arra[i]=names.cost;1
-    i++;
+ */
 }
-*/
+
    // sum= $('.carts > .good').data();
 
 
