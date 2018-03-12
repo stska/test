@@ -9,10 +9,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>-->
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
 
-
-  </head>
+</head>
 <body>
 <div class="container">
     <header>
@@ -83,19 +83,19 @@
                 <form>
                     <input class="email" placeholder="email" type="email">
                     <input name="cities" placeholder="City" id="query"/>
-                    <label for="query">city</label>
+                    <!--<label for="query">city</label>-->
                     <input class="submit" type="submit">
 
                 </form>
                 <!-- <div class="list_res"></div>  -->
-                <div class="list_new" id="list_1">
-                    <span data-scroll="0">up</span>
+                <!--<div class="list_new" id="list_1">-->
+                    <!--<span data-scroll="0">up</span>-->
                     <ul>
                         <li><a></a></li>
 
                     </ul>
-                    <span data-scroll="1">down</span>
-                </div>
+                    <!--<span data-scroll="1">down</span>-->
+                <!--</div>-->
                 <input class="date_birth" placeholder="Birth" type="text">
                 <!--<div class="date_birth"></div>-->
 
@@ -118,31 +118,46 @@
           <div id="accordion">
               <h3>Countries</h3>
               <div class="goodsGallery">
-                  <div class="good" data-cost="100" id="good_1">The USA</div>
-                  <div class="good" data-cost="200" id="good_2">Russia</div>
-                  <div class="good" data-cost="150" id="good_3">Great Britain</div>
-                  <div class="good" data-cost="300" id="good_4">Australia</div>
+                  <div class="good" data-cost="100" id="good_1">The USA - 100$</div>
+                  <div class="good" data-cost="200" id="good_2">Russia - 200$</div>
+                  <div class="good" data-cost="150" id="good_3">Great Britain - 150$</div>
+                  <div class="good" data-cost="300" id="good_4">Australia - 300$</div>
               </div>
               <h3>Ammo+cats</h3>
               <div class="goodsGallery">
-                  <div class="good" data-cost="500" id="good_5">grenade</div>
-                  <div class="good" data-cost="700" id="good_6">pistols</div>
-                  <div class="good" data-cost="400" id="good_7">riffles</div>
-                  <div class="good" data-cost="2000" id="good_8">cats</div>
+                  <div class="good" data-cost="500" id="good_5">grenade - 500$</div>
+                  <div class="good" data-cost="700" id="good_6">pistols  - 700$</div>
+                  <div class="good" data-cost="400" id="good_7">rifles  - 400$</div>
+                  <div class="good" data-cost="2000" id="good_8">cats - 2000$</div>
               </div>
               <h3>Cakes</h3>
               <div class="goodsGallery">
-                  <div class="good" data-cost="200" id="good_9">Pancake</div>
-                  <div class="good" data-cost="100" id="good_10">Cupcake</div>
-                  <div class="good" data-cost="50" id="good_11">Cake</div>
-                  <div class="good" data-cost="20" id="good_12">kebab-cake</div>
+                  <div class="good" data-cost="200" id="good_9">Pancake - 200$</div>
+                  <div class="good" data-cost="100" id="good_10">Cupcake - 100$</div>
+                  <div class="good" data-cost="50" id="good_11">Cake - 50$</div>
+                  <div class="good" data-cost="20" id="good_12">kebab-cake - 20$</div>
               </div>
           </div>
 
           <div class="carts"></div>
           <div class="money"></div>
-
     </div>
+    <!-- Wrapper -->
+    <div>
+        <!-- Carousel -->
+        <div class="jcarousel">
+            <ul>
+                <li>...</li>
+                <li>...</li>
+            </ul>
+        </div>
+
+        <!-- Pagination -->
+        <div class="jcarousel-pagination">
+            <!-- Pagination items will be generated in here -->
+        </div>
+    </div>
+
 
     <!--
     <div id="dialog-form" title="Create new user">
