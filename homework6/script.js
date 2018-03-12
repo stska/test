@@ -1,3 +1,5 @@
+$( document ).tooltip();
+
 //creating the top menu
 $('.dws-menu ul li').hover(function () {
 
@@ -131,35 +133,37 @@ $('.carts').droppable({
         })
        // ui.draggable.draggable('disable').appendTo(this);
         ui.draggable.appendTo(this);
-        sss(this);
+        sss(ui);
     }
 
 })
 var summ=0;
-function sss() {
-    var collect=$('.carts > div');
-    for(var i=0;i<collect.length;i++){
-        var dat=collect[i].attributes[1].nodeValue;
-        summ=summ+(+dat);
-        console.log(dat);
-    }
-    $('.money').text(summ);
-  /* var a=$('.carts .good').length;
-   var b=$('.carts .good').attributes.nodeValue;
-   console.log(b);
-    var fin =$('.carts > .good').data();
-    console.log($(costF));
-    sum = $(costF.lastChild);
-    console.log(sum);
-    names=sum.data()
-    console.log(names.cost);
-    arra[i]=names.cost;1
- */
+function sss(set) {
+     summ=0;
+    /*var collect=$('.carts > div');
+
+    if(collect.length>0) {
+        for (var i = 0; i < collect.length; i++) {
+            var dat = collect[i].attributes[1].nodeValue;
+            summ = summ + (+dat);
+            console.log(dat);
+        }
+   } else summ=0;
+    */
+ var grasped=set.draggable[0];
+ var dataCost=grasped.dataset.cost;
+// console.log(grasped);
+    $('.carts > div').each(function (t) {
+        // console.log(this.dataset.cost);
+         summ=summ+(+this.dataset.cost);
+     })
+    $('.money').text(summ+" $");
+
+
 }
 
-   // sum= $('.carts > .good').data();
 
-
+    // $('.money').text(summ);
 
 
 //-------------
@@ -169,6 +173,7 @@ $('.goodsGallery').droppable({
             backgroundColor: 'gray'
         })
         ui.draggable.appendTo(this);
+        sss(ui);
     }
 });
 $('.cart .good').draggable({
@@ -290,3 +295,4 @@ $('.date_birth').datepicker();
 $( "#accordion" ).accordion({
     collapsible: true
 });
+
